@@ -24,8 +24,16 @@ hs_err_pid*
 
 # Ignore Gradle project-specific cache directory
 .gradle
+!gradle-wrapper.jar
 
 # Ignore Gradle build output directory
-build
-bin
+/build/
+/bin/
 
+# Eclipse
+.project
+.classpath
+.settings
+
+# Other
+*.bak
