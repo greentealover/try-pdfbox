@@ -40,6 +40,14 @@ public class Utils {
 		return clazz.getSimpleName() + ".pdf";
 	}
 
+	public static File getTestOutputImageFile(Class<?> clazz, String formatName) {
+		return new File(getTestOutputDirectory(), getTestOutputImageFileName(clazz, formatName));
+	}
+
+	private static String getTestOutputImageFileName(Class<?> clazz, String formatName) {
+		return clazz.getSimpleName() + "." + formatName;
+	}
+
 	public static StandardProtectionPolicy createBasicTestProtectionPolicy() {
 		AccessPermission accessPermission = new AccessPermission();
 		StandardProtectionPolicy result = new StandardProtectionPolicy("1234", "", accessPermission);
